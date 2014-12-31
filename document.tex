@@ -7,7 +7,7 @@
 \usepackage{fontspec}%%可以使用系统字体
 \usepackage{xcolor}%%代码字体支持
 \usepackage{listings}%%代码支持
-\setmainfont{Songti TC}
+\setmainfont{Songti TC}%%默认字体是宋体
 \XeTeXlinebreaklocale "zh" %%中文换行
 \XeTeXlinebreakskip = 0pt plus 1pt%%中文换行支持
 \lstset{numbers=left, 
@@ -16,11 +16,12 @@
 	frame=shadowbox, 
 	rulesepcolor= \color{ red!20!green!20!blue!20}
 }%%代码设置
+\usepackage{graphicx}%可以插入png图片
 \begin{document}
 \title{lfs笔记}
 \author{渔家傲}
 \maketitle
-
+\includegraphics{image/rayjoy.png}
 \input{pages}
 
 \end{document}

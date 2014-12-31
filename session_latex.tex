@@ -6,13 +6,16 @@
  还有一点，美国某些学术论坛会隐性拒绝接受word排版的文档。
 \subsection{tex latex xelatex texlive等名词解释}
  tex是排版系统的总称，而latex，xelatex，luatex是各种命令，相当于不同的实现，
- 他们有不同的特点，选择对比中，我选择用xelatex（或者叫xetex），主要是因为编码问题
- 内部使用utf-8编码可以解决中文问题而不用cjk宏只要指定默认字体就好
+ 他们有不同的特点，选择对比中，我选择用xelatex（或者叫xetex），主要是因为编码问题,内部使用utf-8编码可以很好的解决中文问题，不用cjk宏。虽然luatex可以在tex里面支持lua编程。不过感觉还是没有xetex那么完善，相关的宏包也比较少。\par
+ texlive(mac下叫做mactex)其实是tex的一个发行版本，也可以理解为tex的软件中心。可以手动下载tex的各种命令和各种宏包（库）
 \subsection{mac下tex安装}
-\subsection{texlive安装 使用}
-因为自己公司笔记本是mac，其实linux和mac原理一样，直接就用公司笔记本了。\newline
+mactex:https://tug.org/mactex/
+最小化安装https://tug.org/mactex/morepackages.html
 \subsection{相关地址}
 直接到这里查相关宏包地址 http://www.ctan.org/pkg/
+\subsection{基本命令}
+include 和input是不同的 一般include 快 但是include不能子包含
+一个inlcude的file不能再次include
 \subsection{非宏包相关命令}
 \subsection{例子，注意事项和使用技巧}
 其实不用举例子 本文就是最好的例子不过还是要举几个例子的方便自己查看或者使用
