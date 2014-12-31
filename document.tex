@@ -1,11 +1,26 @@
-\documentclass[10pt]{book}
-\usepackage{fontspec}
+\documentclass[11pt]{book}
+\makeatletter
+\let\@afterindentfalse\@afterindenttrue
+\@afterindenttrue
+\makeatother
+\setlength{\parindent}{2em}%中文缩进两个汉字位
+\usepackage{fontspec}%%可以使用系统字体
+\usepackage{xcolor}%%代码字体支持
+\usepackage{listings}%%代码支持
 \setmainfont{Songti TC}
+\XeTeXlinebreaklocale "zh" %%中文换行
+\XeTeXlinebreakskip = 0pt plus 1pt%%中文换行支持
+\lstset{numbers=left, 
+	numberstyle= \normalsize , 
+	keywordstyle= \color{ blue!70},commentstyle=\color{red!50!green!50!blue!50}, 
+	frame=shadowbox, 
+	rulesepcolor= \color{ red!20!green!20!blue!20}
+}%%代码设置
 \begin{document}
 \title{lfs笔记}
 \author{渔家傲}
 \maketitle
-\include{session_purpose}%%写作目的
-\include{session_latex}%%latex相关
-\include{session_git}%%git
+
+\input{pages}
+
 \end{document}

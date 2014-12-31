@@ -1,9 +1,34 @@
 \section{准备--latex}
 \subsection{tex系列介绍}
-百科就不写了,tex是美国人发明的一种排版系统，
+ tex是美国人发明的排版系统，用于排版书籍，文档等等。虽然我们日常使用word，但是
+ word是微软专属格式，兼容性不好。而且排版基于视觉，所见即所得，看似方便，但是难于对细节的把握,
+ 就像很多前端都不喜欢deamwaver写代码一样，代码写出来的和拖出来的不一样，写出来的可以更加精确的控制各种细节。
+ 还有一点，美国某些学术论坛会隐性拒绝接受word排版的文档。
+\subsection{tex latex xelatex texlive等名词解释}
+ tex是排版系统的总称，而latex，xelatex，luatex是各种命令，相当于不同的实现，
+ 他们有不同的特点，选择对比中，我选择用xelatex（或者叫xetex），主要是因为编码问题
+ 内部使用utf-8编码可以解决中文问题而不用cjk宏只要指定默认字体就好
 \subsection{mac下tex安装}
 \subsection{texlive安装 使用}
-
+因为自己公司笔记本是mac，其实linux和mac原理一样，直接就用公司笔记本了。\newline
+\subsection{相关地址}
+直接到这里查相关宏包地址 http://www.ctan.org/pkg/
+\subsection{非宏包相关命令}
+\subsection{例子，注意事项和使用技巧}
+其实不用举例子 本文就是最好的例子不过还是要举几个例子的方便自己查看或者使用
+\subsubsection{代码展示}
+加入宏包
+usepackage{xcolor}%%代码字体支持
+usepackage{listings}%%代码支持
+\begin{lstlisting}[language=bash]
+#!/bin/bash
+echo 'ok';
+\end{lstlisting}
+\subsubsection{加入中文断行}
+\begin{lstlisting}[language=Tex]
+\XeTeXlinebreaklocale "zh" %%中文换行
+\XeTeXlinebreakskip = 0pt plus 1pt%%中文换行支持
+\end{lstlisting}
 
 
 
